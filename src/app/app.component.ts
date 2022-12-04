@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, interval } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,6 @@ import { Observable, of } from 'rxjs';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  public value: Observable<string> = of('123');
+  // Create an observable that emits a value every 1s = 1000 ms.
+  public observable$: Observable<number> = interval(1000);
 }
