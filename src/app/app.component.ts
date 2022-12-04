@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  value: Observable<string> = of('123');
+  public value: Observable<string> = of('123');
 }
