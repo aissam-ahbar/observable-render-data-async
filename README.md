@@ -1,3 +1,15 @@
-# observable-render-data-async
+# Observables to render data asynchronously
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/node-mtwvvn)
+Observables allow to render data asynchronously.
+
+You can cancel an observable, follow progress and subscribe to it.
+
+```
+# app.component.ts
+  public observable$: Observable<number> = interval(1000);
+```
+
+```
+# app.component.html (unsubscribed automatically)
+{{ observable$ | async }}
+```
